@@ -61,5 +61,16 @@ fullOrder.prototype.sumTotal = function() {
     });
     this.totalCost = totalCost;
 }
+var customerOrder = function(){
+    var fname = $("#fname").val()
+    var lname = $("#lname").val()
+    var city = $("#city").val()
+    var location = $("#location").val()
+    var contact = $("#ctc").val()
+    var hse = $("#hse").val()
+
+    return new fullOrder(fname, lname, city, location, contact, hse)
+}
+
 
 });
