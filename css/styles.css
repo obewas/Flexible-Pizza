@@ -1,8 +1,59 @@
-#logo {
-   
-font-size: 200px 150px;
-margin-left: 300px;
-margin-right: 300px;
-font-display: ;
+.header {
+    background-color: maroon;
+    background-size: cover;
+    display: flex;
+    height: 25%;
+    
 
+}
+
+.header img {
+    display: inline-block;
+    height: 150%;
+    background-size: cover;
+    
+}
+.header h3 {
+    text-align: center;
+    color: white;
+    padding-left: 200px;
+    padding-top: 20px;
+}
+.header h5 {
+    text-align: right;
+    color: white;
+    padding-left: 400px;
+    padding-top: 20px;
+}
+.nav {
+    padding-left: 400px;
+    font-style: normal;
+    font-weight: bold;
+    background-color: gray;
+    padding-top: 0;
+    color: white;
+}
+.nav #menu {
+    padding-left: 100px;
+}
+.nav #ctc {
+    padding-left: 100px;
+}
+.nav #gall {
+    padding-left: 100px;
+}
+.launch-order h3 {
+    padding-left: 0
+}
+
+.order-details {
+    display: flex
+   
+}
+.lname {
+    display: 
+}
+.order {
+    display: flexbox
+    
 }
