@@ -14,7 +14,7 @@
     <div class="header">
         <img src="./images/logo3.png" alt="" id="logo">
        <h3>Flexible Pizza</h3>
-       <h5>Dial-a-deivery 1-pizza-8888</h5>
+       <h5>Dial-a-delivery: 1-pizza-8888</h5>
             
     </div>
       
@@ -61,6 +61,7 @@
                     <label for="customer-hse">House Number</label>
                     <input type="text" name="customer-hse" id="hse">
                 </div>
+                <button class="submit">Submit</button>
                 
             </form>
         
@@ -79,9 +80,9 @@
             </div>
         </div>
         
-        <div class="toppings">
-            <h4>2. Choose your toppings</h4>
-            <select name="toppings" id="toppings">
+        <div class="flavor">
+            <h4>2. Choose your flavor</h4>
+            <select name="flavor" id="flavor">
                 <option value="peperroni">Pepperoni</option>
                 <option value="mushrooms">Mushrooms</option>
                 <option value="bacon">Bacon</option>
@@ -90,13 +91,25 @@
                 <option value="mtbbq">Meat Barbeque</option>
 
             </select>
+            <div class="toppings">
+                <h4>3.Choose toppings</h4>
+                <select name="veg" id="veg">
+                    <option value="veg">vegetable</option>
+                    <option value="beef">Beef</option>
+                    <option value="chicken">Chicken</option>
+
+                </select>
+                
+            </div>
+            <div class="delivery">
+                <h4>4. Delivery</h4>
+                <label class="checkbox-inline"><input type="radio" name="delivery" value="yes">Yes</label>
+                <label class="checkbox-inline"><input type="radio" name="delivery" value="no">No</label>           
+                
+            </div>
+            <button>Send</button>
         </div>
-        <div class="delivery">
-            <h4>3. Delivery?</h4>
-            <label class="checkbox-inline"><input type="radio" name="delivery" value="yes">Yes</label>
-            <label class="checkbox-inline"><input type="radio" name="delivery" value="no">No</label>           
-            
-        </div>
+       
         <hr>
         <div class="total">
             <h4>Price:</h4>
