@@ -9,41 +9,108 @@
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>Flexible pizza</title>
 </head>
+
 <body>
     <div class="header">
-        <h1>Flexible Pizza</h1>
-        <img src="./images/logo.png" alt="" id="logo">
-        <h3>Flexible enough for your specifications and taste!!</h3>
+        <img src="./images/logo3.png" alt="" id="logo">
+       <h3>Flexible Pizza</h3>
+       <h5>Dial-a-deivery 1-pizza-8888</h5>
+            
     </div>
-    <br>
+      
+    <div class="nav">
+        <h4 id="abt">About us</h4>
+        <h4 id="menu">Menu</h4>
+        <h4 id="ctc">Contact us</h4>
+        <h4 id="gall">Gallery</h4>
+    </div>
+    
     <div class="container">
         <div class="launch-order">
-            <h3>Ready for your order below</h3>
+            <h3>Enter your details below:</h3>
         </div>
         <div class="order-details">
             <form action="">
-                <label for="customer-fname">First Name</label>
-                <input type="text" name="customer-fname" id="fname">
-                <label for="customer-lname">Last Name</label>
-                <input type="text" name="customer-lname" id="lname">
+                <div class="fname">
+                    <label for="customer-fname">First Name</label>
+                    <input type="text" name="customer-fname" id="fname">    
+                </div>
+                <div class="lname">
+                    <label for="customer-lname">Last Name</label>
+                    <input type="text" name="customer-lname" id="lname">    
+                </div>
+                
             </form>
             <form action="">
-                <label for="customer-city">City</label>
-                <input type="text" name="customer-city" id="city">
-                <label for="customer-location">Location</label>
-                <input type="text" name="customer-location" id="location">
+                <div class="city">
+                    <label for="customer-city">City</label>
+                    <input type="text" name="customer-city" id="city">
+                </div>
+                <div class="location">
+                    <label for="customer-location">Location</label>
+                    <input type="text" name="customer-location" id="location">
+                </div>
+                
             </form>
             <form action="">
-                <label for="customer-contact">Contact</label>
-                <input type="text" name="customer-contact" id="contact">
-                <label for="customer-hse">House Number</label>
-                <input type="text" name="customer-hse" id="hse">
+                <div class="contact">
+                    <label for="customer-contact">Contact</label>
+                    <input type="text" name="customer-contact" id="contact">    
+                </div>
+                <div class="hse">
+                    <label for="customer-hse">House Number</label>
+                    <input type="text" name="customer-hse" id="hse">
+                </div>
+                
             </form>
+        
+        </div>
+        <hr>
+        <div class="order">
+            <p>Place your order below</p>
+            <div class="size">
+                <h4>1. Pizza size</h4>
+                <label class="checkbox-inline"><input type="radio" name="size" value="xlarge">Extra Large</label>
+                <label class="checkbox-inline"><input type="radio" name="size" value="large">Large</label>
+                <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
+                <label class="checkbox-inline"><input type="radio" name="size" value="small">Small</label>     
+                   
+                
+            </div>
+        </div>
+        
+        <div class="toppings">
+            <h4>2. Choose your toppings</h4>
+            <select name="toppings" id="toppings">
+                <option value="peperroni">Pepperoni</option>
+                <option value="mushrooms">Mushrooms</option>
+                <option value="bacon">Bacon</option>
+                <option value="extra-cheese">Extra Cheese</option>
+                <option value="chknbbq">Chicken Barbeque</option>
+                <option value="mtbbq">Meat Barbeque</option>
 
-
-
+            </select>
+        </div>
+        <div class="delivery">
+            <h4>3. Delivery?</h4>
+            <label class="checkbox-inline"><input type="radio" name="delivery" value="yes">Yes</label>
+            <label class="checkbox-inline"><input type="radio" name="delivery" value="no">No</label>           
+            
+        </div>
+        <hr>
+        <div class="total">
+            <h4>Price:</h4>
+            <p id="total"></p>
+        </div>
+        <div class="message">
+            <p id="message"></p>
         </div>
     </div>
-    <img src="./images/pizza.jpeg" alt="PIZZZAAAA">
+    <div class="div">
+        <img src="./images/pizza.jpeg" alt="PIZZZAAAA">
+
+    </div>
+
+    
 </body>
 </html>
