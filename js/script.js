@@ -62,14 +62,32 @@ fullOrder.prototype.sumTotal = function() {
     this.totalCost = totalCost;
 }
 var customerOrder = function(){
-    var fname = $("#fname").val()
-    var lname = $("#lname").val()
-    var city = $("#city").val()
-    var location = $("#location").val()
-    var contact = $("#ctc").val()
-    var hse = $("#hse").val()
+    var fname = $("#fname").val();
+    var lname = $("#lname").val();
+    var city = $("#city").val();
+    var location = $("#location").val();
+    var contact = $("#ctc").val();
+    var hse = $("#hse").val();
 
     return new fullOrder(fname, lname, city, location, contact, hse)
+}
+var orderedPizza = function(){
+    var size = $("input['name=size']:checked").val();
+    var flavor = $("option:selected").val();
+    var newPizza = new Pizza(size, flavor)
+    $("input['name=veg']:checked").each(function(){
+        newPizza.addVeg($(this).val());
+    });
+    var beef = []
+    $("input['name=beef']:checked").each(function(){
+        newPizza.addBeef($(this).val());
+    });
+    $("input['name=chkn']:checked").each(function(){
+        newPizza.addChicken($(this).val());
+    });
+    resetForm();
+    return newPizza;
+
 }
 
 
