@@ -1,94 +1,49 @@
-//Bsiness Logic
-$(document).ready(function(){
-    function Pizza(size, toppings){
-        this.size = size;
-        this.vegToppings = [];
-        this.beefToppings= [];
-        this.chickenToppings = [];
-        
-    }
-    Pizza.prototype.addVeg = function(veges){
-        this.toppings.push(veges);
-    }
-    Pizza.prototype.addBeef = function(beef){
-        this.toppings.push(beef);
-    }
-    Pizza.prototype.addChicken = function(chicken){
-        this.toppings.push(chicken);
-    }
-    
-    Pizza.prototype.basicCost = function(){
-        if (this.size === "small"){
-            cost = 600;
-        } else if (this.size === "medium") {
-            cost = 800;
-        } else if (this.size === "large"){
-            cost = 1000;
-        } else if (this.size === "xlarge"){
-            cost = 1500;
-        }
-    this.vegToppings.forEach(function(){
-        addCost += 200
-        })
-    this.beefToppings.forEach(function(){
-        addCost += 200
-    })
-    this.chickenToppings.forEach(function(){
-        addCost += 250
-    })
-    this.addCost = cost;
-    }
-contact
-
-function fullOrder(fname, lname, city, location, contact, hse){
-    this.fname = fname;
-    this.lname = lname;
-    this.city = city;
-    this.location = location;
-    this.contact = contact;
-    this.hse = hse;
-    this.pizzaCost = []
-    }
-
-fullOrder.prototype.addPiza = function(Pizza){
-    Pizza.basicCost();
-    this.pizzaCost.push(pizza)
+//Business Logic
+function PizzaOrder(size, flavor, toppings, qty) {
+  this.size = size
+  this.flavor = flavor
+  this.toppings = toppings
+  this.qty = qty
 }
-fullOrder.prototype.sumTotal = function() {
-    var totalCost = 0;
-    this.pizzas.forEach(function(pizza) {
-      totalCost += pizza.addCost;
-    });
-    this.totalCost = totalCost;
+var newOrder = new PizzaOrder(size,flavor,toppings,qty)
+
+
+var size = document.getElementsByName('size').value 
+if (size === 'small'){
+  costSize = 400
+} else if (size === 'medium'){
+  costSize = 500
+} else if (size === 'large') {
+  costSize = 600;
+} else if (size === 'xlarge') {
+  costSize = 700;
 }
-var customerOrder = function(){
-    var fname = $("#fname").val();
-    var lname = $("#lname").val();
-    var city = $("#city").val();
-    var location = $("#location").val();
-    var contact = $("#ctc").val();
-    var hse = $("#hse").val();
-
-    return new fullOrder(fname, lname, city, location, contact, hse)
+var flavor = document.getElementById('flavor').value
+  if (flavor === 'pepperoni'){
+  costFlavor = 400;
+} else if (flavor === 'bacon'){
+  costFlavor = 600;
+} else if (flavor === 'mushrooms'){
+  costFlavor = 400;
+} else if (flavor === 'barbeque'){
+  costFlavor = 500;
 }
-var orderedPizza = function(){
-    var size = $("input['name=size']:checked").val();
-    var flavor = $("option:selected").val();
-    var newPizza = new Pizza(size, flavor)
-    $("input['name=veg']:checked").each(function(){
-        newPizza.addVeg($(this).val());
-    });
-    var beef = []
-    $("input['name=beef']:checked").each(function(){
-        newPizza.addBeef($(this).val());
-    });
-    $("input['name=chkn']:checked").each(function(){
-        newPizza.addChicken($(this).val());
-    });
-    resetForm();
-    return newPizza;
-
+var toppings = document.getElementsByName('tops').value
+  if (toppings === 'Vegetable'){
+   costTops = 250
+} else if (toppings === 'beef'){
+  costTops = 250
+} else if (toppings === 'chkn'){
+  costTops = 250
 }
+var delivery = document.getElementsByName('del').value
+  if (delivery === 'yes'){
+    costDel = 300
+  } else {
+    costDel = 0
+  }
+var qty = document.getElementById('qty').value
 
+var totalCost = ((costSize + costFlavor + costTops) * qty) + costDel;
 
-});
+document.getElementById('price').innerHTML = "Your order total is Ksh. " + totalCost + "."
