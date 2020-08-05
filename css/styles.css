@@ -45,7 +45,9 @@
 .launch-order h3 {
     padding-left: 0
 }
-
+.launch-order {
+    width: 100%;
+}
 .order-details {
     display: flex
    

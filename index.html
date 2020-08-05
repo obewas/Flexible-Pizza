@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/jquery-3.5.1.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>Flexible pizza</title>
@@ -62,45 +62,43 @@
         
         <div class="place-order" style="background-image: url(./images/pzzz.jpg);">
             <p>Place your order below</p>
-                <div class="size">
+                <div id="size">
                     <h4>Pizza size</h4>
-                    <label class="checkbox-inline"><input type="radio" name="size" id="xlarge">Extra Large</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" id="large">Large</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" id="medium">Medium</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" id="small">Small</label>                                    
+                    <label class="checkbox-inline"><input type="radio" name="size" value="xlarge">Extra Large</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="large">Large</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="small">Small</label>                                    
                 </div>
                 <div class="flavor">
                 <h4>Choose your flavor</h4>
                     <select name="flavor" id="flavor">
                         <option value="peperroni">Pepperoni</option>
-                        <option value="mushrooms">Mushrooms</option>
+                        <option value="mushrooms">Mushroom</option>
                         <option value="bacon">Bacon</option>
-                        <option value="extra-cheese">Extra Cheese</option>
-                        <option value="chknbbq">Chicken Barbeque</option>
-                        <option value="mtbbq">Meat Barbeque</option>
+                        <option value="chknbbq">Barbeque</option>
     
                     </select>
                 <div class="toppings">
                     <h4>3.Choose toppings</h4>
                     
-                        <label class="checkbox-inline"><input type="radio" name="veg" value="veg">Vegetable</label>
-                        <label class="checkbox-inline"><input type="radio" name="beef" value="beef">Beef</label>
-                        <label class="checkbox-inline"><input type="radio" name="chkn" value="chkn">Chicken</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="veg">Vegetable</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="beef">Beef</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="chkn">Chicken</label>
                     
                 </div>
                 <div class="delivery">
                     <h4>4. Delivery</h4>
-                    <label class="checkbox-inline"><input type="radio" name="delivery" value="yes">Yes</label>
-                    <label class="checkbox-inline"><input type="radio" name="delivery" value="no">No</label>           
+                    <label class="checkbox-inline"><input type="radio" name="del" value="yes">Yes</label>
+                    <label class="checkbox-inline"><input type="radio" name="del" value="no">No</label>           
                     
                 </div>
-                <button class="submit">Submit</button>
+                <button class="submit" onclick="PizzaOrder()">Submit</button>
             </div>
            
             <hr>
             <div class="total">
                 <h4>Price:</h4>
-                <p id="total"></p>
+                <p id="price"></p>
             </div>
             <div class="message">
                 <p id="message"></p>
@@ -115,6 +113,5 @@
     </div>
        
         </div>
-   
 </body>
 </html>
