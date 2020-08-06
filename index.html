@@ -64,31 +64,31 @@
             <p>Place your order below</p>
                 <div id="size">
                     <h4>Pizza size</h4>
-                    <label class="checkbox-inline"><input type="radio" name="size" value="xlarge">Extra Large</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="xlarge"checked>Extra Large</label>
                     <label class="checkbox-inline"><input type="radio" name="size" value="large">Large</label>
                     <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" value="small">Small</label>                                    
+                    <label class="checkbox-inline"><input type="radio" name="size" value="small" >Small</label>                                    
                 </div>
-                <div id="flavor">
+                <div class="flavor">
                 <h4>Choose your flavor</h4>
-                    <select name="flavor" id="flavor">
-                        <option value="pepperoni">Pepperoni</option>
-                        <option value="mushroom">Mushroom</option>
-                        <option value="bacon">Bacon</option>
-                        <option value="barbeque">Barbeque</option>
-    
-                    </select>
-                <div id="toppings">
+                <select id=flavor>
+                    <option value= 'pepperoni'>Pepperoni</option>
+                    <option value='mushroom'>Mushroom</option>
+                    <option value='bacon'>Bacon</option>
+                    <option value='barbeque'>Barbeque</option>
+                    
+                 </select>
+                <div id="tops">
                     <h4>Choose toppings</h4>
                     
-                        <label class="checkbox-inline"><input type="radio" name="tops" value="veg">Vegetable</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="veg" checked>Vegetable</label>
                         <label class="checkbox-inline"><input type="radio" name="tops" value="beef">Beef</label>
                         <label class="checkbox-inline"><input type="radio" name="tops" value="chkn">Chicken</label>
                     
                 </div>
                 <div class="qty">
-                    <label for="">Choose quantity</label>
-                    <input type="number" value=""name="qty">
+                    <label for="quantity">Choose quantity</label>
+                    <input type="number" id="qty" name="quantity" min="1" max="5">
                     
                 </div>
                 <div id="delivery">
@@ -102,7 +102,7 @@
            
             <hr>
             <div class="total">
-                <h4>Price:</h4>
+                
                 <p id="price"></p>
             </div>
             <div class="message">
