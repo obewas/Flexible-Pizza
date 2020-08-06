@@ -12,6 +12,8 @@ function PizzaOrder(size, flavor, toppings, qty,customer) {
     var estate = document.getElementById('estate')
     var contact = document.getElementById('ctc')
     var hse = document.getElementById('hse')
+
+    alert(fname)
   }
   
 }
