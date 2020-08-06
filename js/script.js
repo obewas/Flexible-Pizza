@@ -1,10 +1,19 @@
 //Business Logic
 
-function PizzaOrder(size, flavor, toppings, qty) {
+function PizzaOrder(size, flavor, toppings, qty,customer) {
   this.size = size
   this.flavor = flavor
   this.toppings = toppings
   this.qty = qty
+  this.customer = function(fname, lname, city, estate, contsct, hse){
+    var fname = document.getElementById('fname').value
+    var lname = document.getElementById('lname')
+    var city = document.getElementById('city')
+    var estate = document.getElementById('estate')
+    var contact = document.getElementById('ctc')
+    var hse = document.getElementById('hse')
+  }
+  
 }
 //var newOrder = new PizzaOrder(size,flavor,toppings,qty)
 
@@ -56,7 +65,8 @@ var delivery = document.getElementsByName('del').value
   }
 var qty = document.getElementById('qty').value
 
-var totalCharge = ((costSize + costFlavor + costTops) * qty) + delivery
+var totalCharge = ((costSize + costFlavor + costTops) * qty) + costDel
 alert(totalCharge) 
-document.getElementById('price').innerHTML = "Your order total is Ksh. " + totalCharge + "."
+var today = new Date()
+document.getElementById('price').innerHTML = today + "Your order total is Ksh. " + totalCharge + "."
 }
