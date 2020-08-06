@@ -69,30 +69,35 @@
                     <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
                     <label class="checkbox-inline"><input type="radio" name="size" value="small">Small</label>                                    
                 </div>
-                <div class="flavor">
+                <div id="flavor">
                 <h4>Choose your flavor</h4>
                     <select name="flavor" id="flavor">
-                        <option value="peperroni">Pepperoni</option>
-                        <option value="mushrooms">Mushroom</option>
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="mushroom">Mushroom</option>
                         <option value="bacon">Bacon</option>
-                        <option value="chknbbq">Barbeque</option>
+                        <option value="barbeque">Barbeque</option>
     
                     </select>
-                <div class="toppings">
-                    <h4>3.Choose toppings</h4>
+                <div id="toppings">
+                    <h4>Choose toppings</h4>
                     
                         <label class="checkbox-inline"><input type="radio" name="tops" value="veg">Vegetable</label>
                         <label class="checkbox-inline"><input type="radio" name="tops" value="beef">Beef</label>
                         <label class="checkbox-inline"><input type="radio" name="tops" value="chkn">Chicken</label>
                     
                 </div>
-                <div class="delivery">
-                    <h4>4. Delivery</h4>
+                <div class="qty">
+                    <label for="">Choose quantity</label>
+                    <input type="number" value=""name="qty">
+                    
+                </div>
+                <div id="delivery">
+                    <h4>Delivery</h4>
                     <label class="checkbox-inline"><input type="radio" name="del" value="yes">Yes</label>
                     <label class="checkbox-inline"><input type="radio" name="del" value="no">No</label>           
                     
                 </div>
-                <button class="submit" onclick="PizzaOrder()">Submit</button>
+                <button class="submit" onclick="totalCost()">Submit</button>
             </div>
            
             <hr>
