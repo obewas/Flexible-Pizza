@@ -9,7 +9,7 @@ function PizzaOrder(size, flavor, toppings, qty) {
 //var newOrder = new PizzaOrder(size,flavor,toppings,qty)
 
 function totalCost(){
-/*var size = document.getElementsByTagName('size').value
+var size = document.getElementsByTagName('size').value
 alert(size)
 costSize = 0
 if (size === 'small'){
@@ -21,7 +21,7 @@ if (size === 'small'){
 } else if (size === 'xlarge') {
   costSize += 700;
 }
-*/
+
 var select = document.getElementById('flavor').value;
 cost = 0;
 alert(select);
