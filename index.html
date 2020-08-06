@@ -3,34 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/jquery-3.5.1.js"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/jquery-3.5.1.js" type="text/javascript"></script>
+    <script src="./js/script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <title>Flexible pizza</title>
 </head>
-
 <body>
     <div class="header">
         <img src="./images/logo3.png" alt="" id="logo">
-       <h3>Flexible Pizza</h3>
-       <h5>Dial-a-deivery 1-pizza-8888</h5>
-            
+        <h3>Flexible Pizza</h3>
+        <h5>Dial-a-delivery: 1-pizza-8888</h5>    
     </div>
-      
     <div class="nav">
         <h4 id="abt">About us</h4>
         <h4 id="menu">Menu</h4>
         <h4 id="ctc">Contact us</h4>
         <h4 id="gall">Gallery</h4>
     </div>
-    
     <div class="container">
-        <div class="launch-order">
+        <div class="launch-order" style="background-image: url(./images/pzzz.jpg); background-size: cover;">
             <h3>Enter your details below:</h3>
         </div>
-        <div class="order-details">
-            <form action="">
+            <div class="order-details">
+                <form action="">
                 <div class="fname">
                     <label for="customer-fname">First Name</label>
                     <input type="text" name="customer-fname" id="fname">    
@@ -50,7 +46,6 @@
                     <label for="customer-location">Location</label>
                     <input type="text" name="customer-location" id="location">
                 </div>
-                
             </form>
             <form action="">
                 <div class="contact">
@@ -61,56 +56,67 @@
                     <label for="customer-hse">House Number</label>
                     <input type="text" name="customer-hse" id="hse">
                 </div>
-                
             </form>
         
         </div>
-        <hr>
-        <div class="order">
-            <p>Place your order below</p>
-            <div class="size">
-                <h4>1. Pizza size</h4>
-                <label class="checkbox-inline"><input type="radio" name="size" value="xlarge">Extra Large</label>
-                <label class="checkbox-inline"><input type="radio" name="size" value="large">Large</label>
-                <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
-                <label class="checkbox-inline"><input type="radio" name="size" value="small">Small</label>     
-                   
-                
-            </div>
-        </div>
         
-        <div class="toppings">
-            <h4>2. Choose your toppings</h4>
-            <select name="toppings" id="toppings">
-                <option value="peperroni">Pepperoni</option>
-                <option value="mushrooms">Mushrooms</option>
-                <option value="bacon">Bacon</option>
-                <option value="extra-cheese">Extra Cheese</option>
-                <option value="chknbbq">Chicken Barbeque</option>
-                <option value="mtbbq">Meat Barbeque</option>
-
-            </select>
-        </div>
-        <div class="delivery">
-            <h4>3. Delivery?</h4>
-            <label class="checkbox-inline"><input type="radio" name="delivery" value="yes">Yes</label>
-            <label class="checkbox-inline"><input type="radio" name="delivery" value="no">No</label>           
-            
-        </div>
-        <hr>
-        <div class="total">
-            <h4>Price:</h4>
-            <p id="total"></p>
-        </div>
-        <div class="message">
-            <p id="message"></p>
-        </div>
-    </div>
-    <div class="div">
-        <img src="./images/pizza.jpeg" alt="PIZZZAAAA">
-
-    </div>
-
+        <div class="place-order" style="background-image: url(./images/pzzz.jpg);">
+            <p>Place your order below</p>
+                <div id="size">
+                    <h4>Pizza size</h4>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="xlarge">Extra Large</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="large">Large</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="small">Small</label>                                    
+                </div>
+                <div id="flavor">
+                <h4>Choose your flavor</h4>
+                    <select name="flavor" id="flavor">
+                        <option value="pepperoni">Pepperoni</option>
+                        <option value="mushroom">Mushroom</option>
+                        <option value="bacon">Bacon</option>
+                        <option value="barbeque">Barbeque</option>
     
+                    </select>
+                <div id="toppings">
+                    <h4>Choose toppings</h4>
+                    
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="veg">Vegetable</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="beef">Beef</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="chkn">Chicken</label>
+                    
+                </div>
+                <div class="qty">
+                    <label for="">Choose quantity</label>
+                    <input type="number" value=""name="qty">
+                    
+                </div>
+                <div id="delivery">
+                    <h4>Delivery</h4>
+                    <label class="checkbox-inline"><input type="radio" name="del" value="yes">Yes</label>
+                    <label class="checkbox-inline"><input type="radio" name="del" value="no">No</label>           
+                    
+                </div>
+                <button class="submit" onclick="totalCost()">Submit</button>
+            </div>
+           
+            <hr>
+            <div class="total">
+                <h4>Price:</h4>
+                <p id="price"></p>
+            </div>
+            <div class="message">
+                <p id="message"></p>
+            </div>
+
+
+
+        </div> 
+            
+  
+        </div>
+    </div>
+       
+        </div>
 </body>
 </html>

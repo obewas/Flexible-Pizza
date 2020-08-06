@@ -45,15 +45,49 @@
 .launch-order h3 {
     padding-left: 0
 }
-
+.launch-order {
+    width: 100%;
+}
 .order-details {
     display: flex
    
 }
-.lname {
-    display: 
-}
-.order {
-    display: flexbox
+.place-order {
+    color: maroon;
+    font-weight: bold;
+    padding-top: 0;
+    background-color: rgb(84, 163, 84);
+    padding-left: 5px;
+    font-size: small;
+    font-style: normal;
     
+}
+
+.order-details{
+    display: inline-flexbox;
+    
+}
+.city {
+    padding-left: 100px;
+}
+.contact {
+    padding-left: 100px;
+}
+.location {
+    padding-left: 70px;
+}
+.hse {
+    padding-left: 50px;
+}
+.size {
+   display: inline;
+   
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .columns {
+      width: 100%;
+    }
 }
