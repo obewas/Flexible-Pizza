@@ -29,11 +29,11 @@
                 <form action="">
                 <div class="fname">
                     <label for="customer-fname">First Name</label>
-                    <input type="text" name="customer-fname" id="fname">    
+                    <input type="text" name="customer-fname" id="firstname">    
                 </div>
                 <div class="lname">
                     <label for="customer-lname">Last Name</label>
-                    <input type="text" name="customer-lname" id="lname">    
+                    <input type="text" name="customer-lname" id="lastname">    
                 </div>
                 
             </form>
@@ -87,13 +87,13 @@
                     
                 </div>
                 <div class="qty">
-                    <label for="quantity">Choose quantity</label>
-                    <input type="number" id="qty" name="quantity" min="1" max="5">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="qty" name="quantity" min="1" max="" value="">
                     
                 </div>
-                <div id="delivery">
+                <div id="del">
                     <h4>Delivery</h4>
-                    <label class="checkbox-inline"><input type="radio" name="del" value="yes">Yes</label>
+                    <label class="checkbox-inline"><input type="radio" name="del" value="yes"checked>Yes</label>
                     <label class="checkbox-inline"><input type="radio" name="del" value="no">No</label>           
                     
                 </div>
@@ -102,8 +102,9 @@
            
             <hr>
             <div class="total">
-                
+                <p id="customerDetails"></p>
                 <p id="price"></p>
+                
             </div>
             <div class="message">
                 <p id="message"></p>
