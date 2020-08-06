@@ -1,49 +1,62 @@
 //Business Logic
+
 function PizzaOrder(size, flavor, toppings, qty) {
   this.size = size
   this.flavor = flavor
   this.toppings = toppings
   this.qty = qty
 }
-var newOrder = new PizzaOrder(size,flavor,toppings,qty)
+//var newOrder = new PizzaOrder(size,flavor,toppings,qty)
 
-
-var size = document.getElementsByName('size').value 
+function totalCost(){
+/*var size = document.getElementsByTagName('size').value
+alert(size)
+costSize = 0
 if (size === 'small'){
-  costSize = 400
+  costSize += 400
 } else if (size === 'medium'){
-  costSize = 500
+  costSize += 500
 } else if (size === 'large') {
-  costSize = 600;
+  costSize += 600;
 } else if (size === 'xlarge') {
-  costSize = 700;
+  costSize += 700;
 }
-var flavor = document.getElementById('flavor').value
-  if (flavor === 'pepperoni'){
-  costFlavor = 400;
-} else if (flavor === 'bacon'){
-  costFlavor = 600;
-} else if (flavor === 'mushrooms'){
-  costFlavor = 400;
-} else if (flavor === 'barbeque'){
-  costFlavor = 500;
+*/
+var select = document.getElementById('flavor').value;
+cost = 0;
+alert(select);
+if (select === 'pepperoni'){
+	cost += 400;
+}else if (select === 'mushroom'){
+cost += 500;
 }
+if (select === 'bacon'){
+cost += 600;
+}if (select === 'barbeque'){
+cost += 700;
+}
+
+/*
 var toppings = document.getElementsByName('tops').value
+  costTops = 0
   if (toppings === 'Vegetable'){
-   costTops = 250
+   costTops += 250
 } else if (toppings === 'beef'){
-  costTops = 250
+  costTops += 250
 } else if (toppings === 'chkn'){
-  costTops = 250
+  costTops += 250
 }
 var delivery = document.getElementsByName('del').value
+  costDel = 0
   if (delivery === 'yes'){
-    costDel = 300
+    costDel += 300
   } else {
     costDel = 0
   }
-var qty = document.getElementById('qty').value
+//var qty = document.getElementById('qty').value
 
-var totalCost = ((costSize + costFlavor + costTops) * qty) + costDel;
+var totalCharge = ((costFlavor + costTops) + costDel);
+alert(costFlavor) */
 
-document.getElementById('price').innerHTML = "Your order total is Ksh. " + totalCost + "."
+document.getElementById('price').innerHTML = "Your order total is Ksh. " + select + "."
+}
