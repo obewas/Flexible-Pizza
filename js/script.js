@@ -14,6 +14,7 @@ function PizzaOrder(size, flavor, toppings, qty) {
     this.costSize = costSize
     this.costTops = costTops
 var size = document.querySelectorAll("input[name=size]:checked")[0].value
+
 costSize = 0
 if (size === 'small'){
   costSize += 400
@@ -38,7 +39,6 @@ costFlavor += 700;
 }
 
 var toppings = document.querySelectorAll("input[name=tops]:checked")[0].value
-
   costTops = 0
   if (toppings === 'Vegetable'){
    costTops += 250
@@ -47,7 +47,7 @@ var toppings = document.querySelectorAll("input[name=tops]:checked")[0].value
 } else if (toppings === 'chkn'){
   costTops += 250
 }
-var delivery = document.getElementsByName('del').value
+var delivery = document.querySelectorAll("input[name=del]:checked")[0].value
   costDel = 0
   if (delivery === 'yes'){
     costDel += 300
@@ -56,7 +56,18 @@ var delivery = document.getElementsByName('del').value
   }
 var qty = document.getElementById('qty').value
 
-var totalCharge = ((costSize + costFlavor + costTops) * qty) + delivery
-alert(totalCharge) 
+var totalCharge = ((costSize + costFlavor + costTops) * qty) + costDel
+
 document.getElementById('price').innerHTML = "Your order total is Ksh. " + totalCharge + "."
+
+var fname = document.getElementById('fname').value
+var lname = document.getElementById('lname').value
+var city = document.getElementById('city').value
+var location = document.getElementById('location').value
+var contact = document.getElementById('contact').value
+var hse = document.getElementById('hse').value
+
+document.getElementById('message').innerHTML = fname + " " + lname + ' Address: '+ location + ',' + 'House no: '+ hse + ',' + city
+
+
 }
