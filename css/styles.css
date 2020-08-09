@@ -36,6 +36,9 @@
 .nav #menu {
     padding-left: 100px;
 }
+.nav li {
+    display: inline;
+}
 .nav #ctc {
     padding-left: 100px;
 }
@@ -83,7 +86,10 @@
    display: inline;
    
 }
-
+.about-us h4 {
+    color: maroon;
+    text-align: center;
+}
 
 
 @media only screen and (max-width: 600px) {

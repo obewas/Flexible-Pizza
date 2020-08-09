@@ -16,10 +16,13 @@
         <h5>Dial-a-delivery: 1-pizza-8888</h5>    
     </div>
     <div class="nav">
-        <h4 id="abt">About us</h4>
-        <h4 id="menu">Menu</h4>
-        <h4 id="ctc">Contact us</h4>
-        <h4 id="gall">Gallery</h4>
+        <ul>
+            <li href="#about" id="abt">About us</li>
+            <li href="#menu"id="menu">Menu</li>
+            <li href="#contacts"id="ctc">Contacts</li>
+            <li href="#gallery" id="gall">Gallery</li>
+        </ul>
+        
     </div>
     <div class="container">
         <div class="launch-order" style="background-image: url(./images/pzzz.jpg); background-size: cover;">
@@ -60,41 +63,41 @@
         
         </div>
         
-        <div class="place-order" style="background-image: url(./images/pzzz.jpg);">
+        <div class="place-order" style="background-image: url(./images/pzzz.jpg); font-size: medium;width: 100%;">
             <p>Place your order below</p>
                 <div id="size">
-                    <h4>Pizza size</h4>
-                    <label class="checkbox-inline"><input type="radio" name="size" value="xlarge"checked>Extra Large</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" value="large">Large</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium</label>
-                    <label class="checkbox-inline"><input type="radio" name="size" value="small" >Small</label>                                    
+                    <h4>Crust size</h4>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="xlarge"checked>Extra Large Ksh.600</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="large">Large Ksh.600</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium Ksh.500</label>
+                    <label class="checkbox-inline"><input type="radio" name="size" value="small" >Small Ksh.400</label>                                    
                 </div>
                 <div class="flavor">
                 <h4>Choose your flavor</h4>
                 <select id=flavor>
-                    <option value= 'pepperoni'>Pepperoni</option>
-                    <option value='mushroom'>Mushroom</option>
-                    <option value='bacon'>Bacon</option>
-                    <option value='barbeque'>Barbeque</option>
+                    <option value= 'pepperoni'>Pepperoni Ksh.400</option>
+                    <option value='mushroom'>Mushroom Ksh.500</option>
+                    <option value='bacon'>Bacon Ksh.600</option>
+                    <option value='barbeque'>Barbeque Ksh.700</option>
                     
                  </select>
                 <div id="tops">
                     <h4>Choose toppings</h4>
                     
-                        <label class="checkbox-inline"><input type="radio" name="tops" value="veg" checked>Vegetable</label>
-                        <label class="checkbox-inline"><input type="radio" name="tops" value="beef">Beef</label>
-                        <label class="checkbox-inline"><input type="radio" name="tops" value="chkn">Chicken</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="veg" checked>Vegetable Ksh.250</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="beef">Beef Ksh.250</label>
+                        <label class="checkbox-inline"><input type="radio" name="tops" value="chkn">Chicken Ksh.250</label>
                     
                 </div>
                 <div class="qty">
                     <label for="quantity">Choose quantity</label>
-                    <input type="number" id="qty" name="quantity" min="1" max="5">
+                    <input type="number" id="qty" name="quantity" min="1" max="15">
                     
                 </div>
                 <div id="delivery">
-                    <h4>Delivery</h4>
-                    <label class="checkbox-inline"><input type="radio" name="del" value="yes">Yes</label>
-                    <label class="checkbox-inline"><input type="radio" name="del" value="no">No</label>           
+                    <h4>Delivery(charges 300)</h4>
+                    <label class="checkbox-inline"><input type="radio" name="del" value="yes">Delivery</label>
+                    <label class="checkbox-inline"><input type="radio" name="del" value="no">Collection</label>           
                     
                 </div>
                 <button class="submit" onclick="totalCost()">Submit</button>
@@ -112,9 +115,18 @@
         </div> 
             
   
-        </div>
+        
     </div>
-       
-        </div>
+    <div class="about-us">
+        <h4>About Flexible Pizza</h4>
+        <p>Flexible Pizza offers fantastic takeaway food and renowned for its quality and presentation of freshly prepared food, we achieve this by paying special attention to every fine detail in our menu and only using the very finest and freshest ingredients.
+
+            If you are looking for a great selection of Pizza, then take a look at our menu and order from our easy to use online website.
+            
+            Please visit our website on a regular basis to see our latest menu updates and any of our special offers, all available on our website.</p>
+
+    </div>
+
+        
 </body>
 </html>
