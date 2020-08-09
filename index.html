@@ -66,7 +66,7 @@
         <div class="place-order" style="background-image: url(./images/pzzz.jpg); font-size: medium;width: 100%;">
             <p>Place your order below</p>
                 <div id="size">
-                    <h4>Crust size</h4>
+                    <h4>CRUST SIZE</h4>
                     <label class="checkbox-inline"><input type="radio" name="size" value="xlarge"checked>Extra Large Ksh.600</label>
                     <label class="checkbox-inline"><input type="radio" name="size" value="large">Large Ksh.600</label>
                     <label class="checkbox-inline"><input type="radio" name="size" value="medium">Medium Ksh.500</label>
@@ -77,8 +77,8 @@
                 <select id=flavor>
                     <option value= 'pepperoni'>Pepperoni Ksh.400</option>
                     <option value='mushroom'>Mushroom Ksh.500</option>
-                    <option value='bacon'>Bacon Ksh.600</option>
-                    <option value='barbeque'>Barbeque Ksh.700</option>
+                    <option value='bacon'>Bacon and Eggs Ksh.600</option>
+                    <option value='barbeque'>Beef Barbeque Ksh.700</option>
                     
                  </select>
                 <div id="tops">
@@ -117,6 +117,26 @@
   
         
     </div>
+    <div class="container">
+        <button class="open-button" onclick="openForm()">Open Form</button>
+      
+      <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+          <h1>Enter your details below</h1>
+          <label for=fname><b>First Name</b></label>
+          <input type="text" placeholder="First name" name="fname"required>
+          <label for=lname><b>Last Name</b></label>
+          <input type="text" placeholder="Last name" name="lname"required>
+          
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+      <button type="submit" class="btn">Login</button>
+          <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+        </form>
+      </div>
+        
+      </div>
     <div class="about-us">
         <h4>About Flexible Pizza</h4>
         <p>Flexible Pizza offers fantastic takeaway food and renowned for its quality and presentation of freshly prepared food, we achieve this by paying special attention to every fine detail in our menu and only using the very finest and freshest ingredients.
@@ -125,6 +145,11 @@
             
             Please visit our website on a regular basis to see our latest menu updates and any of our special offers, all available on our website.</p>
 
+    </div>
+    <div class="menu">
+        <img src="./images/bacon.jpeg" alt="">
+        <img src="./images/mushroom.jpg" alt="">
+        <img src="./images/pepperoni.jpeg" alt="">
     </div>
 
         
