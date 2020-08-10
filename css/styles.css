@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 .header {
     background-color: maroon;
     background-size: cover;
@@ -43,6 +46,10 @@
 }
 .nav li {
     display: inline;
+
+}
+.nav li:hover, li:active {
+    color: red;
 }
 .nav #ctc {
     padding-left: 100px;
@@ -50,8 +57,11 @@
 .nav #gall {
     padding-left: 100px;
 }
-.launch-order h3 {
-    padding-left: 0
+.container-order {
+    padding: 0;
+    margin: 0;
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .launch-order {
     width: 100%;
@@ -83,10 +93,10 @@
     padding-left: 100px;
 }
 .location {
-    padding-left: 70px;
+    padding-left: 75px;
 }
 .hse {
-    padding-left: 50px;
+    padding-left: 55px;
 }
 .size {
    display: inline;
@@ -97,7 +107,7 @@
     text-align: center;
 }
 body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+
 
 /* Button used to open the contact form - fixed at the bottom of the page */
 .open-button {
@@ -166,7 +176,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .form-container .btn:hover, .open-button:hover {
   opacity: 1;
 }
-</style>
+
 
 
 @media only screen and (max-width: 600px) {
